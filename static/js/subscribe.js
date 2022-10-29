@@ -10,7 +10,6 @@ var observer = new MutationObserver(function(mutations) {
 var target = document.getElementById('mce-error-response');
 observer.observe(target, { attributes : true, attributeFilter : ['style'] });
 
-
 var observer2 = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutationRecord) {
         document.getElementById('autoRedirectMessage').innerHTML = `<p>Please Wait You Will be Automatically Redirected!</p>
@@ -28,8 +27,6 @@ function autoRedirect(){
     setTimeout(back, 3000);
 }
 
-/* This function looks to see what the globalpagename is and then goes to that url useing
- Flask Jsglue */
 function back(){
     window.location.replace("contact.html");
 }
